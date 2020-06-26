@@ -39,12 +39,14 @@ const questions = [
     {
         type: "input",
         message: "What command should the user use to install dependencies?",
-        name: "install"
+        name: "install",
+        default: "npm i"
     },
     {
         type: "input",
-        mesaage: "What command should run tests?",
-        name: "tests"
+        message: "What command should be used to run tests?",
+        name: "tests",
+        default: "npm test"
     },
     {
         type: "input",

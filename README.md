@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
-This project dynamically generates a README based on user input.
+This project dynamically creates README files with user input.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -22,13 +22,13 @@ This project dynamically generates a README based on user input.
 Use the command "npm i" to install dependencies.
 
 ## Usage
-This is a standard repo.
+This is a normal repo.
 
 ## License
 This project is licensed under the MIT license.
 
 ## Contributing
-Please do not contribute.
+Do not contribute.
 
 ## Tests
 Use the command "npm test" to run tests.

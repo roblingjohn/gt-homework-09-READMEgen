@@ -98,7 +98,7 @@ ${description}
 
 * [License](#license)
 
-* [Contributiong](#contributing)
+* [Contributing](#contributing)
 
 * [Tests](#tests)
 

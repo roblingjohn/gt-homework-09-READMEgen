@@ -51,50 +51,54 @@ const questions = [
     }
 ];
 
+
+let READMEText;
 inquirer.prompt(questions)
 // put data from answers into variables
     .then(function(answer) {
         const {username, email, title, description, license, install, tests, usage, contribution} = answer
 // created html template with template literals for input answers
-        const READMEText = `
-        # ${title}
+        READMEText = `
+# ${title}
 
-        ## Description
-        ${description}
+## Description
+${description}
 
-        ## Table of Contents
-        I'll make this later.
+## Table of Contents
+I'll make this later.
 
-        ## Installation
-        ${install}
+## Installation
+${install}
 
-        ## Usage
-        ${usage}
+## Usage
+${usage}
 
-        ## License
-        ${license}
+## License
+${license}
 
-        ## Contributions
-        ${contribution}
+## Contributions
+${contribution}
 
-        ## Tests
-        ${tests}
+## Tests
+${tests}
 
-        ## Questions
-        For any questions, please contact me at http://github.com/${username} or at ${email}.
+## Questions
+For any questions, please contact me at http://github.com/${username} or at ${email}.
         `
-
-
-
-});
+}).then(function () {fs.writeFile("sampleREADME.md", READMEText, (err) => {
+    if (err) throw err;
+})
+}
+)
 
 // function to write README file
 
 
-// function to initialize program
-function init() {
 
-}
+// function to initialize program
+// function init() {
+
+// }
 
 // function call to initialize program
-init();
+// init();

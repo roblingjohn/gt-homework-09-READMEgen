@@ -52,19 +52,41 @@ const questions = [
 ];
 
 inquirer.prompt(questions)
+// put data from answers into variables
     .then(function(answer) {
-        fs.writeFile("answers.json", JSON.stringify(answer), "utf8", function(err){
-        if(err){
-            return console.log("error")
-        }
-}) 
+        const {username, email, title, description, license, install, tests, usage, contribution} = answer
+// created html template with template literals for input answers
+        const READMEText = `
+        # ${title}
+
+        ## Description
+        ${description}
+
+        ## Table of Contents
+        I'll make this later.
+
+        ## Installation
+        ${install}
+
+        ## Usage
+        ${usage}
+
+        ## License
+        ${license}
+
+        ## Contributions
+        ${contribution}
+
+        ## Tests
+        ${tests}
+
+        ## Questions
+        For any questions, please contact me at http://github.com/${username} or at ${email}.
+        `
+
+
 
 });
-
-// put data from questions into variables
-// created html template with template literals for input answers
-
-
 
 // function to write README file
 

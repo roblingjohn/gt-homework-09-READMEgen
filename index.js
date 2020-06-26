@@ -21,32 +21,39 @@ const questions = [
     },
     {
         type: "input",
-        message: "Please describe the project.",
+        message: "Please giver a short description of the project.",
         name: "description"
     },
     {
-        type: "input",
-        message: "I need to figure out how to do the choosy thing.",
-        name: "license"
+        type: "list",
+        message: "What kind of license would you like to use for your project?",
+        name: "license",
+        choices: [
+            "MIT",
+            "APACHE 2.0",
+            "GPL 3.0",
+            "BSD 3",
+            "None"
+        ]
     },
     {
         type: "input",
-        message: "Please explain any installation instructions.",
+        message: "What command should the user use to install dependencies?",
         name: "install"
     },
     {
         type: "input",
-        mesaage: "Testing parameters?",
+        mesaage: "What command should run tests?",
         name: "tests"
     },
     {
         type: "input",
-        message: "Please give info on the usage.",
+        message: "What does the user need to know about using the repo?",
         name: "usage"
     },
     {
         type: "input",
-        message: "Any contribution guidelines?",
+        message: "What are the contribution guidelines?",
         name: "contribution"
     }
 ];
@@ -65,22 +72,32 @@ inquirer.prompt(questions)
 ${description}
 
 ## Table of Contents
-I'll make this later.
+* [Installation](#installation)
+
+*[Usage](#usage)
+
+*[License](#license)
+
+*[Contributiong](#contributing)
+
+*[Tests](#tests)
+
+*[Questions](#questions)
 
 ## Installation
-${install}
+Use the command "${install}" to install dependencies.
 
 ## Usage
 ${usage}
 
 ## License
-${license}
+This project is licensed under the ${license} license.
 
-## Contributions
+## Contributing
 ${contribution}
 
 ## Tests
-${tests}
+Use the command "${tests}" to run tests.
 
 ## Questions
 For any questions, please contact me at http://github.com/${username} or at ${email}.

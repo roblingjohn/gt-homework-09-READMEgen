@@ -131,15 +131,3 @@ Please visit my GitHub page at [${username}](http://github.com/${username}).
 })
 }
 )
-
-
-
-
-
-// function to initialize program
-// function init() {
-
-// }
-
-// function call to initialize program
-// init();

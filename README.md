@@ -1,9 +1,8 @@
 
 # Good README Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
-This project dynamically generates a README based on user input.
+This application is used to dynamically create a README file using user input from the terminal application.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -12,7 +11,7 @@ This project dynamically generates a README based on user input.
 
 * [License](#license)
 
-* [Contributiong](#contributing)
+* [Contributing](#contributing)
 
 * [Tests](#tests)
 
@@ -22,16 +21,17 @@ This project dynamically generates a README based on user input.
 Use the command "npm i" to install dependencies.
 
 ## Usage
-This is a standard repo.
+Video demonstration: https://drive.google.com/file/d/1PMBHeenwPn1IwKbe8ejp1u4Aem-nSHmq/view
 
-## License
-This project is licensed under the MIT license.
+![Screenshot 1](./assets/images/screenshot01.png)
+![Screenshot 3](./assets/images/screenshot03.png)
+![Screenshot 7](./assets/images/screenshot07.png)
+![Screenshot 11](./assets/images/screenshot11.png)
+
+This application can only be run through terminal. Enter "node index.js" to run it. After answering the prompts, you will have a README saved at sampleREADME.md.
 
 ## Contributing
-Please do not contribute.
-
-## Tests
-Use the command "npm test" to run tests.
+Please do not contribute to this project.
 
 ## Questions
 If you have any questions, you can email me directly at roblingjohn@gmail.com. 

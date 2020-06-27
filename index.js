@@ -39,12 +39,14 @@ const questions = [
     {
         type: "input",
         message: "What command should the user use to install dependencies?",
-        name: "install"
+        name: "install",
+        default: "npm i"
     },
     {
         type: "input",
-        mesaage: "What command should run tests?",
-        name: "tests"
+        message: "What command should be used to run tests?",
+        name: "tests",
+        default: "npm test"
     },
     {
         type: "input",
@@ -58,14 +60,16 @@ const questions = [
     }
 ];
 
-
+// set variable for text to be written in README
 let READMEText;
+// set variable for placing badge in readme
 let licenseBadge;
+// ask the user questions for each section
 inquirer.prompt(questions)
 // put data from answers into variables
     .then(function(answer) {
         const {username, email, title, description, license, install, tests, usage, contribution} = answer
-// created html template with template literals for input answers
+        // select badge to place on README
         if (license === "MIT"){
             licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
         }
@@ -81,7 +85,7 @@ inquirer.prompt(questions)
         else if (license === "None") {
             licenseBadge = ""
         }
-
+// created html template with template literals for input answers
         READMEText = `
 # ${title}
 
@@ -96,7 +100,7 @@ ${description}
 
 * [License](#license)
 
-* [Contributiong](#contributing)
+* [Contributing](#contributing)
 
 * [Tests](#tests)
 
@@ -121,20 +125,9 @@ Use the command "${tests}" to run tests.
 If you have any questions, you can email me directly at ${email}. 
 Please visit my GitHub page at [${username}](http://github.com/${username}).
         `
-}).then(function () {fs.writeFile("README.md", READMEText, (err) => {
+ // function to write README file
+}).then(function () {fs.writeFile("sampleREADME.md", READMEText, (err) => {
     if (err) throw err;
 })
 }
 )
-
-// function to write README file
-
-
-
-// function to initialize program
-// function init() {
-
-// }
-
-// function call to initialize program
-// init();
